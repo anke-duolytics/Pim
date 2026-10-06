@@ -1,0 +1,849 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Scripts & hooks · Budget Kerstmarkt</title><style>
+:root{--bg:#fbf8f3;--fg:#1f2a24;--muted:#5d6b63;--accent:#b3261e;--green:#1f5c3a;--card:#fff;--line:#e6e0d6}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#141a17;--fg:#ece7de;--muted:#a7b1aa;--accent:#ff7b6e;--green:#7fd1a0;--card:#1c2420;--line:#2e3833}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+nav{position:sticky;top:0;background:var(--card);border-bottom:1px solid var(--line);display:flex;gap:4px;flex-wrap:wrap;padding:10px 16px;z-index:2}
+nav a{color:var(--fg);text-decoration:none;padding:6px 12px;border-radius:999px;font-weight:600;font-size:14px}
+nav a.on,nav a:hover{background:var(--green);color:#fff}
+main{max-width:980px;margin:0 auto;padding:24px 16px 64px}
+h1{color:var(--accent);line-height:1.2}h2{color:var(--green);margin-top:2.2em;border-bottom:2px solid var(--line);padding-bottom:4px}
+a{color:var(--green)}hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+blockquote{margin:1em 0;padding:10px 16px;background:var(--card);border-left:4px solid var(--accent);border-radius:6px}
+.t{overflow-x:auto;margin:1em 0}table{border-collapse:collapse;width:100%;font-size:14px;background:var(--card)}
+th,td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}th{background:var(--green);color:#fff}
+code{background:var(--card);border:1px solid var(--line);padding:1px 5px;border-radius:4px;font-size:.9em}
+li input{margin-right:6px}</style></head><body><nav><a href="shotlijst.html">Shotlijst & research</a><a href="draaidag.html">Draaidag 18 video's</a><a href="scripts.html" class="on">Scripts & hooks</a></nav><main><h1>Scripts &amp; hooks: 18 video&#39;s</h1>
+<p><strong>Budget Kerstmarkt Boskoop · draaidag 6 oktober 2026</strong></p>
+<p>Hoort bij: <a href="draaidag.html">Draaidag 18 video&#39;s</a> (videonummers zijn gelijk).</p>
+<p><strong>Regel: om de 2 seconden nieuwe waarde.</strong> Elke beat (2 sec) heeft minstens één van deze vier:
+💰 een <strong>prijs</strong> · 💡 een <strong>tip/info</strong> · 👀 een <strong>nieuw beeld/reveal</strong> · 😄 een <strong>emotie/reactie</strong>.
+Nooit 2 seconden &quot;niets&quot;: geen lege loopshots, geen langzame intro&#39;s, geen logo aan het begin.</p>
+<p><strong>Legenda:</strong> <em>Tekst in beeld</em> = wat er op het scherm staat · <em>VO</em> = voice-over of wat de presentator zegt · <code>€__</code> = vandaag invullen met de echte prijs.
+<strong>Per video:</strong> 1 hoofdhook + 2 alternatieven. Neem ze alle drie op, dan kun je later testen welke het beste werkt.</p>
+<hr>
+<h2>#1 · &quot;Nieuwe levering binnen!&quot; (BHTS · ±20 sec)</h2>
+<p><strong>Hook:</strong> &quot;Er is net een vrachtwagen vol kerst binnengekomen… en alles is onder de €__.&quot;
+<strong>Alt:</strong> &quot;Unboxing, maar dan voor kerstfans 📦&quot; · &quot;Dit lag gisteren nog niet in de winkel.&quot;</p>
+<div class="t"><table>
+<thead>
+<tr>
+<th>Sec</th>
+<th>Beeld</th>
+<th>Tekst in beeld</th>
+<th>VO</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0–2</td>
+<td>Doos scheurt open (close-up)</td>
+<td>&quot;NET BINNEN 📦&quot;</td>
+<td>&quot;Er is net een vrachtwagen vol kerst binnengekomen…&quot;</td>
+</tr>
+<tr>
+<td>2–4</td>
+<td>Hand haalt glitterbal eruit</td>
+<td>&quot;€__&quot; 💰</td>
+<td>&quot;…en kijk wat erin zit.&quot;</td>
+</tr>
+<tr>
+<td>4–6</td>
+<td>Tweede doos: strikken/linten</td>
+<td>&quot;Trend 2026: strikken in je boom 🎀&quot; 💡</td>
+<td>&quot;Dé trend van dit jaar.&quot;</td>
+</tr>
+<tr>
+<td>6–8</td>
+<td>Derde doos: ornamenten in de vorm van eten</td>
+<td>&quot;Stroopwafel-ornament? Ja echt. €__&quot; 💰</td>
+<td>&quot;Een stroopwafel. In je kerstboom.&quot;</td>
+</tr>
+<tr>
+<td>8–10</td>
+<td>Reactie collega 😂</td>
+<td>—</td>
+<td>(gelach)</td>
+</tr>
+<tr>
+<td>10–14</td>
+<td>Timelapse schap vullen</td>
+<td>&quot;Van doos → schap in 4 sec&quot; 👀</td>
+<td>&quot;Binnen een uur ligt het in de winkel.&quot;</td>
+</tr>
+<tr>
+<td>14–16</td>
+<td>Vol schap, lampjes aan</td>
+<td>&quot;Op = op ⏳&quot;</td>
+<td>&quot;En als het op is, is het op.&quot;</td>
+</tr>
+<tr>
+<td>16–20</td>
+<td>Eindkaart</td>
+<td>&quot;Elke week nieuw · Budget Kerstmarkt Boskoop&quot;</td>
+<td>&quot;Elke week nieuw. Kom kijken, de koffie staat klaar.&quot;</td>
+</tr>
+</tbody></table></div>
+<p><strong>Caption:</strong> Net binnen 📦 Strikken, stroopwafel-ornamenten en glitter, alles betaalbaar. Op = op! #kerst #boskoop #budgetkerst</p>
+<hr>
+<h2>#2 · Het gratis bakkie (BHTS · ±15 sec)</h2>
+<p><strong>Hook:</strong> &quot;Bij welke kerstmarkt krijg je gratis koffie bij binnenkomst? Precies. ☕&quot;
+<strong>Alt:</strong> &quot;Kerstshoppen begint hier met een bakkie.&quot; · &quot;Dit kost je bij ons €0,00.&quot;</p>
+<div class="t"><table>
+<thead>
+<tr>
+<th>Sec</th>
+<th>Beeld</th>
+<th>Tekst in beeld</th>
+<th>VO</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0–2</td>
+<td>Koffie inschenken, slow motion, stoom</td>
+<td>&quot;Gratis ☕&quot;</td>
+<td>&quot;Bij welke kerstmarkt krijg je gratis koffie?&quot;</td>
+</tr>
+<tr>
+<td>2–4</td>
+<td>Kopje wordt aangereikt aan de deur</td>
+<td>&quot;Bij binnenkomst. Altijd.&quot; 💡</td>
+<td>&quot;Bij ons. Gewoon bij binnenkomst.&quot;</td>
+</tr>
+<tr>
+<td>4–6</td>
+<td>Klant pakt kopje aan, glimlach</td>
+<td>😄</td>
+<td>Klant: &quot;Oh wat lief!&quot;</td>
+</tr>
+<tr>
+<td>6–8</td>
+<td>Klant loopt met kopje langs de lampjes</td>
+<td>&quot;Shoppen met een bakkie in je hand&quot; 👀</td>
+<td>&quot;Rustig rondkijken, koffie erbij.&quot;</td>
+</tr>
+<tr>
+<td>8–10</td>
+<td>Kassabon: koffie €0,00</td>
+<td>&quot;Prijs: €0,00 💰&quot;</td>
+<td>&quot;Kost: niks.&quot;</td>
+</tr>
+<tr>
+<td>10–13</td>
+<td>Hand tilt kopje naar de camera</td>
+<td>&quot;Gastvrij is gratis&quot;</td>
+<td>&quot;Want gastvrij hoort gratis te zijn.&quot;</td>
+</tr>
+<tr>
+<td>13–15</td>
+<td>Eindkaart</td>
+<td>&quot;Budget Kerstmarkt Boskoop · koffie staat klaar&quot;</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<hr>
+<h2>#3 · Een dag als kerstmedewerker (BHTS · ±30 sec)</h2>
+<p><strong>Hook:</strong> &quot;08:00. De lampjes moeten aan. Kom je mee?&quot;
+<strong>Alt:</strong> &quot;Zo ziet een dag op de goedkoopste kerstmarkt van Boskoop eruit.&quot; · &quot;POV: je werkt elke dag tussen de kerstballen.&quot;</p>
+<div class="t"><table>
+<thead>
+<tr>
+<th>Sec</th>
+<th>Beeld</th>
+<th>Tekst in beeld</th>
+<th>VO</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0–2</td>
+<td>Sleutel in deur, donker</td>
+<td>&quot;08:00 🔑&quot;</td>
+<td>&quot;08:00. Kom je mee?&quot;</td>
+</tr>
+<tr>
+<td>2–4</td>
+<td>Schakelaar → alle lampjes aan</td>
+<td>👀 (wow-moment)</td>
+<td>&quot;Eerst: alle lampjes aan.&quot;</td>
+</tr>
+<tr>
+<td>4–6</td>
+<td>Koffiezetapparaat aan</td>
+<td>&quot;08:10 · koffie voor de klanten ☕&quot;</td>
+<td>&quot;Dan koffie, voor iedereen die binnenkomt.&quot;</td>
+</tr>
+<tr>
+<td>6–8</td>
+<td>Prijsjes plakken</td>
+<td>&quot;08:30 · alles geprijsd. Meeste items onder €__&quot; 💰</td>
+<td>&quot;Prijzen plakken, en die zijn laag.&quot;</td>
+</tr>
+<tr>
+<td>8–10</td>
+<td>Dozen nieuwe levering</td>
+<td>&quot;09:30 · nieuwe levering 📦&quot;</td>
+<td>&quot;Er is weer nieuw binnen.&quot;</td>
+</tr>
+<tr>
+<td>10–12</td>
+<td>Boom versieren (snel)</td>
+<td>&quot;11:00 · themaboom bouwen&quot;</td>
+<td>&quot;Inspiratie-boom bouwen.&quot;</td>
+</tr>
+<tr>
+<td>12–14</td>
+<td>Eerste klant + koffie</td>
+<td>&quot;12:00 · drukte!&quot; 😄</td>
+<td>&quot;En dan komen de klanten.&quot;</td>
+</tr>
+<tr>
+<td>14–16</td>
+<td>Klant raadt prijs, schrikt positief</td>
+<td>&quot;&#39;Is dít maar €__?!&#39;&quot; 💰</td>
+<td>—</td>
+</tr>
+<tr>
+<td>16–18</td>
+<td>Medewerker houdt favoriet item vast</td>
+<td>&quot;Favoriet van vandaag: €__&quot; 💡</td>
+<td>&quot;Mijn favoriet van vandaag.&quot;</td>
+</tr>
+<tr>
+<td>18–20</td>
+<td>Inpakken bij de kassa</td>
+<td>&quot;16:00 · tassen vol, bonnetjes klein&quot;</td>
+<td>&quot;Volle tassen, kleine bonnetjes.&quot;</td>
+</tr>
+<tr>
+<td>20–24</td>
+<td>Lampjes uit, deur dicht</td>
+<td>&quot;17:30 · tot morgen 🎄&quot;</td>
+<td>&quot;En morgen weer.&quot;</td>
+</tr>
+<tr>
+<td>24–30</td>
+<td>Eindkaart</td>
+<td>&quot;Budget Kerstmarkt Boskoop&quot;</td>
+<td>&quot;Kom je ook langs?&quot;</td>
+</tr>
+</tbody></table></div>
+<hr>
+<h2>#4 · Staff pick 1: favoriet onder €5 (±12 sec)</h2>
+<p><strong>Hook:</strong> &quot;Mijn favoriete item onder de €5. En nee, het ziet er niet goedkoop uit.&quot;
+<strong>Alt:</strong> &quot;Als medewerker koop ík dit.&quot; · &quot;€__ en iedereen denkt dat het van een dure winkel komt.&quot;</p>
+<div class="t"><table>
+<thead>
+<tr>
+<th>Sec</th>
+<th>Beeld</th>
+<th>Tekst in beeld</th>
+<th>VO</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0–2</td>
+<td>Medewerker houdt item vlak voor de lens</td>
+<td>&quot;Favoriet onder €5&quot;</td>
+<td>Hook</td>
+</tr>
+<tr>
+<td>2–4</td>
+<td>Item draait in de hand, glinstering</td>
+<td>👀</td>
+<td>&quot;Kijk hoe dit glinstert.&quot;</td>
+</tr>
+<tr>
+<td>4–6</td>
+<td>Prijskaartje close-up</td>
+<td>&quot;€__ 💰&quot;</td>
+<td>&quot;Kost maar €__.&quot;</td>
+</tr>
+<tr>
+<td>6–9</td>
+<td>Item in een setting (boom/tafel)</td>
+<td>&quot;Tip: hang 3 bij elkaar = luxe look&quot; 💡</td>
+<td>&quot;Hang er drie bij elkaar, dan lijkt het superduur.&quot;</td>
+</tr>
+<tr>
+<td>9–12</td>
+<td>Naam medewerker + eindkaart</td>
+<td>&quot;Pick van [naam] · Budget Kerstmarkt&quot;</td>
+<td>&quot;Kom &#39;m halen voordat hij op is.&quot;</td>
+</tr>
+</tbody></table></div>
+<h2>#5 · Staff pick 2 (±12 sec)</h2>
+<p><strong>Hook:</strong> &quot;Dit is het item waar elke klant naar vraagt.&quot;
+Zelfde opbouw als #4. <strong>Tip-beat (6–9 sec):</strong> bijv. <em>&quot;Zet &#39;m op een stapel boeken = instant styling&quot;</em> 💡</p>
+<h2>#6 · Staff pick 3 (±12 sec)</h2>
+<p><strong>Hook:</strong> &quot;Cadeautip onder de €5 die niet goedkoop oogt 🎁&quot;
+Zelfde opbouw als #4. <strong>Tip-beat (6–9 sec):</strong> <em>&quot;Met een strik eromheen = klaar cadeau&quot;</em> 💡</p>
+<hr>
+<h2>#7 · Kerstboom thema Strikken &amp; linten voor €50 (±25 sec)</h2>
+<p><strong>Hook:</strong> &quot;Trend van 2026: geen ballen, maar strikken. Kan dat voor €50?&quot;
+<strong>Alt:</strong> &quot;Deze boom kostte minder dan een pizza-avond 🍕&quot; · &quot;Strikkenboom voor €50. Challenge accepted.&quot;</p>
+<div class="t"><table>
+<thead>
+<tr>
+<th>Sec</th>
+<th>Beeld</th>
+<th>Tekst in beeld</th>
+<th>VO</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0–2</td>
+<td>Kale boom + budgetbord</td>
+<td>&quot;€50 · thema STRIK 🎀&quot;</td>
+<td>Hook</td>
+</tr>
+<tr>
+<td>2–4</td>
+<td>Grab: rol lint uit schap</td>
+<td>&quot;Lint €__ · teller: €__&quot; 💰</td>
+<td>&quot;Eerst lint, veel lint.&quot;</td>
+</tr>
+<tr>
+<td>4–6</td>
+<td>Grab: grote strikken</td>
+<td>&quot;Strikken €__ · teller: €__&quot; 💰</td>
+<td>&quot;Grote strikken voor bovenin.&quot;</td>
+</tr>
+<tr>
+<td>6–8</td>
+<td>Grab: lampjes</td>
+<td>&quot;Lampjes €__ · teller: €__&quot; 💰</td>
+<td>&quot;En warm licht.&quot;</td>
+</tr>
+<tr>
+<td>8–10</td>
+<td>Kassabon</td>
+<td>&quot;Totaal: €__ ✅&quot;</td>
+<td>&quot;Onder budget!&quot;</td>
+</tr>
+<tr>
+<td>10–12</td>
+<td>Handen binden strik in boom</td>
+<td>&quot;Tip: strikken in een spiraal = meer volume&quot; 💡</td>
+<td>&quot;Hang ze in een spiraal.&quot;</td>
+</tr>
+<tr>
+<td>12–14</td>
+<td>Lint van boven naar beneden laten vallen</td>
+<td>&quot;Tip: lint laten &#39;watervallen&#39; 👀&quot; 💡</td>
+<td>&quot;Lint los laten vallen, niet strak.&quot;</td>
+</tr>
+<tr>
+<td>14–16</td>
+<td>Close-up details</td>
+<td>&quot;Kleur: beige + goud = warm &amp; duur&quot; 💡</td>
+<td>&quot;Beige met goud oogt meteen duurder.&quot;</td>
+</tr>
+<tr>
+<td>16–18</td>
+<td>Timelapse afmaken</td>
+<td>—</td>
+<td>&quot;En dan…&quot;</td>
+</tr>
+<tr>
+<td>18–21</td>
+<td>Lampjes aan, tilt omhoog</td>
+<td>👀 REVEAL</td>
+<td>(muziek-drop)</td>
+</tr>
+<tr>
+<td>21–25</td>
+<td>Eindkaart</td>
+<td>&quot;Alles uit deze boom ligt nu in de winkel&quot;</td>
+<td>&quot;Alles hiervan ligt bij ons. Op = op.&quot;</td>
+</tr>
+</tbody></table></div>
+<h2>#8 · Kerstboom thema Cookie/Bakkerij voor €50 (±25 sec)</h2>
+<p><strong>Hook:</strong> &quot;Een kerstboom vol stroopwafels en croissants. Ja, dat is dé trend. 🥐&quot;
+<strong>Alt:</strong> &quot;De lekkerste kerstboom van Boskoop.&quot; · &quot;Deze boom ruikt bijna naar koekjes.&quot;
+Zelfde opbouw als #7. Teksten voor de tip-beats:</p>
+<ul>
+<li>10–12: <em>&quot;Eten-ornamenten = dé trend van dit jaar&quot;</em> 💡</li>
+<li>12–14: <em>&quot;Mix met bruin/crème ballen voor rust&quot;</em> 💡</li>
+<li>14–16: <em>&quot;Tip: jute lint = bakkerij-gevoel&quot;</em> 💡</li>
+<li>Eindbeat: <em>&quot;Intratuin heeft dit thema ook… benieuwd naar het prijsverschil? 👀 (part 2)&quot;</em>, als teaser voor #10.</li>
+</ul>
+<h2>#9 · Kerstboom thema Naturel/Scandi voor €50 (±25 sec)</h2>
+<p><strong>Hook:</strong> &quot;Scandinavische kerst voor €50. Rustig, warm, betaalbaar.&quot;
+<strong>Alt:</strong> &quot;Minder is meer, en ook goedkoper.&quot; · &quot;Dennenappels + gedroogde sinaasappel = kerst 2026.&quot;
+Zelfde opbouw als #7. Tip-beats:</p>
+<ul>
+<li><em>&quot;Max. 3 kleuren: wit, hout, groen&quot;</em> 💡</li>
+<li><em>&quot;Gedroogde sinaasappel = natuurlijk + goedkoop&quot;</em> 💡</li>
+<li><em>&quot;Lampjes warm-wit, nooit koud-wit&quot;</em> 💡</li>
+</ul>
+<hr>
+<h2>#10 · Intratuin vs. Budget Kerstmarkt (±30 sec)</h2>
+<p><strong>Hook:</strong> &quot;Zelfde look. Andere bon. Raad hoeveel goedkoper. 👀&quot;
+<strong>Alt:</strong> &quot;Ik heb de Intratuin-boom nagemaakt…&quot; · &quot;Duur vs. dupe: kerstboom-editie.&quot;</p>
+<div class="t"><table>
+<thead>
+<tr>
+<th>Sec</th>
+<th>Beeld</th>
+<th>Tekst in beeld</th>
+<th>VO</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0–2</td>
+<td>Split screen: 2 bomen</td>
+<td>&quot;Welke is €__ goedkoper?&quot;</td>
+<td>Hook</td>
+</tr>
+<tr>
+<td>2–4</td>
+<td>Foto Intratuin-item 1 + prijs</td>
+<td>&quot;Intratuin: €__ (prijs dd 6-10-2026)&quot; 💰</td>
+<td>&quot;Daar: €__.&quot;</td>
+</tr>
+<tr>
+<td>4–6</td>
+<td>Ons vergelijkbaar item, match cut</td>
+<td>&quot;Bij ons: €__&quot; 💰</td>
+<td>&quot;Bij ons: €__.&quot;</td>
+</tr>
+<tr>
+<td>6–8</td>
+<td>Item 2 daar → hier</td>
+<td>&quot;€__ → €__&quot; 💰</td>
+<td>— (ka-ching)</td>
+</tr>
+<tr>
+<td>8–10</td>
+<td>Item 3 daar → hier</td>
+<td>&quot;€__ → €__&quot; 💰</td>
+<td>— (ka-ching)</td>
+</tr>
+<tr>
+<td>10–12</td>
+<td>Item 4 daar → hier</td>
+<td>&quot;€__ → €__&quot; 💰</td>
+<td>— (ka-ching)</td>
+</tr>
+<tr>
+<td>12–14</td>
+<td>Koffie bij binnenkomst</td>
+<td>&quot;Bonus bij ons: gratis koffie ☕&quot; 😄</td>
+<td>&quot;En bij ons krijg je er koffie bij.&quot;</td>
+</tr>
+<tr>
+<td>14–18</td>
+<td>Timelapse versieren (beelden van #8)</td>
+<td>—</td>
+<td>&quot;Even ophangen…&quot;</td>
+</tr>
+<tr>
+<td>18–21</td>
+<td>Beide bomen lichten op</td>
+<td>👀</td>
+<td>&quot;Zie jij het verschil?&quot;</td>
+</tr>
+<tr>
+<td>21–25</td>
+<td>Bonnetjes naast elkaar</td>
+<td>&quot;Verschil: €__ 🤯&quot; 💰</td>
+<td>&quot;Verschil: €__.&quot;</td>
+</tr>
+<tr>
+<td>25–30</td>
+<td>Eindkaart</td>
+<td>&quot;Zelfde vibe, kleinere bon · Budget Kerstmarkt&quot;</td>
+<td>&quot;Zelfde vibe, kleinere bon.&quot;</td>
+</tr>
+</tbody></table></div>
+<p><strong>Let op:</strong> echte, gedateerde prijzen gebruiken, vergelijkbare producten, en de concurrent niet afkraken.</p>
+<h2>#11 · Xenos vs. Budget Kerstmarkt (±25 sec)</h2>
+<p><strong>Hook:</strong> &quot;Xenos is al goedkoop… maar kunnen wij nóg goedkoper? 🤔&quot;
+<strong>Alt:</strong> &quot;Tafeldecoratie: Xenos vs. ons.&quot; · &quot;Battle van de budget-kerst.&quot;
+Zelfde opbouw als #10, maar met een tafelset (kandelaar, placemats, kerststukje, servetten). Extra waarde-beat: <em>&quot;Tip: hoogteverschil op tafel = meer sfeer&quot;</em> 💡. Uitkomst eerlijk laten zien: als een item bij hen goedkoper is, zeg dat ook. Dat maakt je geloofwaardig.</p>
+<hr>
+<h2>#12 · 30 sec · €20 · tafel kerstklaar (±20 sec)</h2>
+<p><strong>Hook:</strong> &quot;Ik heb 30 seconden en €20 om deze saaie tafel kerstklaar te maken. GO.&quot;
+<strong>Alt:</strong> &quot;Kan een kersttafel voor €20? Timer loopt.&quot; · &quot;Saaie tafel → kersttafel in 30 sec.&quot;</p>
+<div class="t"><table>
+<thead>
+<tr>
+<th>Sec</th>
+<th>Beeld</th>
+<th>Tekst in beeld</th>
+<th>VO</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0–2</td>
+<td>Lege tafel + timer</td>
+<td>&quot;30 SEC · €20 · GO ⏱️&quot;</td>
+<td>Hook + startfluit</td>
+</tr>
+<tr>
+<td>2–4</td>
+<td>Sprint, grab tafelloper</td>
+<td>&quot;Loper €__&quot; 💰</td>
+<td>&quot;Loper!&quot;</td>
+</tr>
+<tr>
+<td>4–6</td>
+<td>Grab kandelaars</td>
+<td>&quot;Kandelaars €__&quot; 💰</td>
+<td>&quot;Kaarsen!&quot;</td>
+</tr>
+<tr>
+<td>6–8</td>
+<td>Grab groen + dennenappels</td>
+<td>&quot;Groen €__&quot; 💰</td>
+<td>&quot;Groen!&quot;</td>
+</tr>
+<tr>
+<td>8–12</td>
+<td>Snel stylen (versneld)</td>
+<td>&quot;Tip: altijd in oneven aantallen (3/5)&quot; 💡</td>
+<td>&quot;Altijd oneven!&quot;</td>
+</tr>
+<tr>
+<td>12–14</td>
+<td>Buzzer, handen omhoog</td>
+<td>&quot;TIJD! ⏰&quot;</td>
+<td>&quot;Tijd!&quot;</td>
+</tr>
+<tr>
+<td>14–17</td>
+<td>Na-reveal, zelfde kader als 0 sec</td>
+<td>&quot;Totaal: €__ ✅&quot; 👀</td>
+<td>&quot;€__. Onder budget.&quot;</td>
+</tr>
+<tr>
+<td>17–20</td>
+<td>Eindkaart</td>
+<td>&quot;Durf jij de challenge aan? 👇&quot;</td>
+<td>&quot;Wat had jij gekocht?&quot;</td>
+</tr>
+</tbody></table></div>
+<h2>#13 · 30 sec · €15 · voordeur kerstklaar (±20 sec)</h2>
+<p><strong>Hook:</strong> &quot;Je voordeur is het eerste wat je bezoek ziet. €15. 30 sec. Go.&quot;
+Zelfde opbouw als #12. Tip-beat: <em>&quot;Krans iets hoger dan het midden hangen = mooier&quot;</em> 💡. Extra: <em>&quot;Deurmat met kerstprint €__&quot;</em> 💰</p>
+<h2>#14 · Vensterbank in 60 sec, collega vs. collega (±30 sec)</h2>
+<p><strong>Hook:</strong> &quot;Collega vs. collega: wie stylt de mooiste vensterbank voor €20? Jij beslist 👇&quot;
+<strong>Alt:</strong> &quot;Battle! Eén vensterbank, twee stijlen.&quot; · &quot;Stem in de comments: links of rechts?&quot;</p>
+<div class="t"><table>
+<thead>
+<tr>
+<th>Sec</th>
+<th>Beeld</th>
+<th>Tekst in beeld</th>
+<th>VO</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0–2</td>
+<td>Twee collega&#39;s naast twee lege vensterbanken</td>
+<td>&quot;BATTLE · €20 · 60 sec&quot;</td>
+<td>Hook</td>
+</tr>
+<tr>
+<td>2–4</td>
+<td>Start, beiden rennen weg</td>
+<td>&quot;⏱️ GO&quot; 😄</td>
+<td>(fluit)</td>
+</tr>
+<tr>
+<td>4–6</td>
+<td>Collega A grabt lampjeshuisjes</td>
+<td>&quot;A: lichthuisjes €__&quot; 💰</td>
+<td>—</td>
+</tr>
+<tr>
+<td>6–8</td>
+<td>Collega B grabt kaarsen + groen</td>
+<td>&quot;B: kaarsen + groen €__&quot; 💰</td>
+<td>—</td>
+</tr>
+<tr>
+<td>8–14</td>
+<td>Split screen stylen (versneld)</td>
+<td>&quot;Tip: lampjes áchter objecten = diepte&quot; 💡</td>
+<td>Commentaar, lachen</td>
+</tr>
+<tr>
+<td>14–16</td>
+<td>Buzzer</td>
+<td>&quot;TIJD!&quot;</td>
+<td>—</td>
+</tr>
+<tr>
+<td>16–20</td>
+<td>Reveal A</td>
+<td>&quot;A: €__&quot; 👀💰</td>
+<td>—</td>
+</tr>
+<tr>
+<td>20–24</td>
+<td>Reveal B</td>
+<td>&quot;B: €__&quot; 👀💰</td>
+<td>—</td>
+</tr>
+<tr>
+<td>24–30</td>
+<td>Beiden wijzen naar de camera</td>
+<td>&quot;Links of rechts? Stem in de comments 👇&quot;</td>
+<td>&quot;Wie wint?&quot;</td>
+</tr>
+</tbody></table></div>
+<p><strong>Comments-stem</strong> stuurt het algoritme aan: reageer zelf op elke stem.</p>
+<hr>
+<h2>#15 · &quot;Wat denk je dat dit kost?&quot; (±20 sec)</h2>
+<p><strong>Hook:</strong> &quot;Raad jij de prijs? Bijna iedereen zit er ver naast.&quot;
+<strong>Alt:</strong> &quot;We vroegen bezoekers de prijs te raden… 😳&quot; · &quot;Te duur geschat, iedere keer weer.&quot;</p>
+<div class="t"><table>
+<thead>
+<tr>
+<th>Sec</th>
+<th>Beeld</th>
+<th>Tekst in beeld</th>
+<th>VO</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0–2</td>
+<td>Item voor de lens</td>
+<td>&quot;Wat denk jij? 👇&quot;</td>
+<td>Hook</td>
+</tr>
+<tr>
+<td>2–4</td>
+<td>Bezoeker 1 raadt</td>
+<td>&quot;Geraden: €__&quot;</td>
+<td>&quot;Ehm… €__?&quot;</td>
+</tr>
+<tr>
+<td>4–6</td>
+<td>Echte prijs, reactie</td>
+<td>&quot;Echt: €__ 💰&quot; 😄</td>
+<td>&quot;Wát?!&quot;</td>
+</tr>
+<tr>
+<td>6–8</td>
+<td>Item 2, bezoeker 2 raadt</td>
+<td>&quot;Geraden: €__&quot;</td>
+<td>—</td>
+</tr>
+<tr>
+<td>8–10</td>
+<td>Echte prijs, reactie</td>
+<td>&quot;Echt: €__ 💰&quot; 😄</td>
+<td>—</td>
+</tr>
+<tr>
+<td>10–12</td>
+<td>Item 3, bezoeker 3 raadt</td>
+<td>&quot;Geraden: €__&quot;</td>
+<td>—</td>
+</tr>
+<tr>
+<td>12–14</td>
+<td>Echte prijs, reactie</td>
+<td>&quot;Echt: €__ 💰&quot; 😄</td>
+<td>—</td>
+</tr>
+<tr>
+<td>14–17</td>
+<td>Collage van reacties</td>
+<td>&quot;Gemiddeld €__ te hoog geschat 🤯&quot; 💡</td>
+<td>—</td>
+</tr>
+<tr>
+<td>17–20</td>
+<td>Eindkaart</td>
+<td>&quot;Kom zelf raden in Boskoop ☕&quot;</td>
+<td>&quot;Kom zelf raden, koffie staat klaar.&quot;</td>
+</tr>
+</tbody></table></div>
+<h2>#16 · &quot;Wat zit er in je tas?&quot; (±20 sec)</h2>
+<p><strong>Hook:</strong> &quot;Hoeveel denk je dat deze volle tas kostte?&quot;
+<strong>Alt:</strong> &quot;Kerst-haul bij de uitgang 🛍️&quot; · &quot;Volle tas, kleine bon.&quot;</p>
+<div class="t"><table>
+<thead>
+<tr>
+<th>Sec</th>
+<th>Beeld</th>
+<th>Tekst in beeld</th>
+<th>VO</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0–2</td>
+<td>Volle tas omhoog</td>
+<td>&quot;Raad de bon 👇&quot;</td>
+<td>Hook</td>
+</tr>
+<tr>
+<td>2–4</td>
+<td>Item 1 eruit</td>
+<td>&quot;€__&quot; 💰</td>
+<td>Klant: &quot;Deze vond ik zó mooi.&quot;</td>
+</tr>
+<tr>
+<td>4–6</td>
+<td>Item 2</td>
+<td>&quot;€__&quot; 💰</td>
+<td>—</td>
+</tr>
+<tr>
+<td>6–8</td>
+<td>Item 3</td>
+<td>&quot;€__&quot; 💰</td>
+<td>—</td>
+</tr>
+<tr>
+<td>8–10</td>
+<td>Item 4</td>
+<td>&quot;€__&quot; 💰</td>
+<td>—</td>
+</tr>
+<tr>
+<td>10–12</td>
+<td>Klant: waarom hier?</td>
+<td>&quot;&#39;Hier is het gewoon gezellig&#39;&quot; 😄</td>
+<td>Klant quote</td>
+</tr>
+<tr>
+<td>12–15</td>
+<td>Bon in beeld</td>
+<td>&quot;TOTAAL: €__ 🤯&quot; 💰</td>
+<td>&quot;Alles voor €__.&quot;</td>
+</tr>
+<tr>
+<td>15–20</td>
+<td>Eindkaart</td>
+<td>&quot;Budget Kerstmarkt Boskoop&quot;</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<h2>#17 · &quot;Boskoop zegt…&quot; (±15 sec)</h2>
+<p><strong>Hook:</strong> &quot;We vroegen bezoekers: omschrijf ons in één woord.&quot;
+<strong>Alt:</strong> &quot;Wat Boskoop van ons vindt 💬&quot; · &quot;Eerlijke reviews, ongefilterd.&quot;</p>
+<div class="t"><table>
+<thead>
+<tr>
+<th>Sec</th>
+<th>Beeld</th>
+<th>Tekst in beeld</th>
+<th>VO</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0–2</td>
+<td>Vraagkaart</td>
+<td>&quot;In 1 woord?&quot;</td>
+<td>Hook</td>
+</tr>
+<tr>
+<td>2–4</td>
+<td>Bezoeker 1</td>
+<td>&quot;&#39;GEZELLIG!&#39;&quot; 😄</td>
+<td>—</td>
+</tr>
+<tr>
+<td>4–6</td>
+<td>Bezoeker 2</td>
+<td>&quot;&#39;Betaalbaar&#39;&quot; 💰</td>
+<td>—</td>
+</tr>
+<tr>
+<td>6–8</td>
+<td>Bezoeker 3</td>
+<td>&quot;&#39;De koffie!&#39; ☕&quot;</td>
+<td>—</td>
+</tr>
+<tr>
+<td>8–10</td>
+<td>Bezoeker 4</td>
+<td>&quot;&#39;Verrassend!&#39;&quot;</td>
+<td>—</td>
+</tr>
+<tr>
+<td>10–12</td>
+<td>Bezoeker 5 (kind?)</td>
+<td>&quot;&#39;Kerstballen!&#39;&quot; 😄</td>
+<td>—</td>
+</tr>
+<tr>
+<td>12–15</td>
+<td>Eindkaart</td>
+<td>&quot;Kom zelf ervaren · Budget Kerstmarkt Boskoop&quot;</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<hr>
+<h2>#18 · &quot;POV: je dacht dat kerst duur moest zijn&quot; (±15 sec)</h2>
+<p><strong>Hook:</strong> &quot;POV: je dacht dat kerst duur moest zijn.&quot;
+<strong>Alt:</strong> &quot;Kerst op budget is geen downgrade.&quot; · &quot;Stop met scrollen als je wilt besparen op kerst.&quot;</p>
+<div class="t"><table>
+<thead>
+<tr>
+<th>Sec</th>
+<th>Beeld</th>
+<th>Tekst in beeld</th>
+<th>VO</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0–2</td>
+<td>Persoon kijkt bezorgd naar portemonnee</td>
+<td>&quot;POV: je dacht dat kerst duur moest zijn&quot;</td>
+<td>— (trending sound)</td>
+</tr>
+<tr>
+<td>2–4</td>
+<td>Loopt naar binnen, koffie aangereikt</td>
+<td>&quot;Gratis koffie ☕&quot;</td>
+<td>—</td>
+</tr>
+<tr>
+<td>4–6</td>
+<td>Lampjes-tunnel/gangpad (b-roll)</td>
+<td>&quot;Trendy kerst 🎄&quot; 👀</td>
+<td>—</td>
+</tr>
+<tr>
+<td>6–8</td>
+<td>Prijskaartjes snel achter elkaar</td>
+<td>&quot;€__ · €__ · €__&quot; 💰</td>
+<td>—</td>
+</tr>
+<tr>
+<td>8–10</td>
+<td>Themaboom-reveal (uit #7/#8/#9)</td>
+<td>&quot;Hele boom: €50&quot; 💰</td>
+<td>—</td>
+</tr>
+<tr>
+<td>10–12</td>
+<td>Persoon lacht, volle tas</td>
+<td>&quot;Bon: €__ 😄&quot;</td>
+<td>—</td>
+</tr>
+<tr>
+<td>12–15</td>
+<td>Eindkaart</td>
+<td>&quot;Een goedkope kerst voor iedereen · Budget Kerstmarkt Boskoop&quot;</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<hr>
+<h2>Vaste eindkaart (alle video&#39;s)</h2>
+<blockquote>
+<p><strong>Budget Kerstmarkt Boskoop</strong>
+Een goedkope kerst voor iedereen 🎄 · Koffie staat klaar ☕
+[adres] · [openingstijden]</p>
+</blockquote>
+<h2>Captions: vaste opbouw</h2>
+<ol>
+<li>Eerste regel = hook herhalen (wordt getoond vóór &quot;meer&quot;).</li>
+<li>1 waarde-zin (tip of prijs).</li>
+<li>Vraag aan de kijker (&quot;Welke zou jij kiezen? 👇&quot;).</li>
+<li>Hashtags: <code>#kerst #kerstinspiratie #boskoop #alphenaandenrijn #budgetkerst #kerstboom #kerst2026 #goedkoop</code></li>
+</ol>
+</main></body></html>
