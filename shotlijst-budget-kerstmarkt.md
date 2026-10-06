@@ -139,7 +139,53 @@ Korte, rauwe video's met een telefoon in de hand. Juist niet te gelikt.
 
 **Ritme:** 3–4 reels per week + dagelijks een story (nieuw binnen of staff pick).
 
-## 6. Draaidag-checklist
+## 6. Opnameplanning: 2,5 week
+Uitgangspunt: 15 draaidagen (ma–za). Grote producties (A, B, C) staan op vaste dagen, en tussendoor wordt doorlopend BHTS (D) en social proof (E) gefilmd. Na 2,5 week moet de content klaarliggen om de rest van het seizoen uit te posten.
+
+### Week 1: voorbereiden + eerste batch
+| Dag | Opnemen | Klaar voor |
+|---|---|---|
+| 1 (ma) | **Voorbereiding:** prijzen bij Intratuin, Groenrijk, Ranzijn en Xenos fotograferen en dateren · items per vergelijking kiezen · eindkaart en lettertype maken | Serie A (alle 4) |
+| 2 (di) | **A1: Intratuin vs. Budget Kerstmarkt** (complete shotlijst) | 1 reel |
+| 3 (wo) | **B1: Kerstboom thema Strikken & linten** · **B2: thema Cookie/Bakkerij** | 2 reels |
+| 4 (do) | **D:** opbouw/winkel inrichten (timelapse), nieuwe levering, koffie-shots · **b-roll blok** (hele lijst §3) | 2–3 reels + b-roll-bank |
+| 5 (vr) | **C1 + C2: In 30 sec upgraden** (tafel €20, voordeur €15) | 2 reels |
+| 6 (za) | **E:** straatinterview "Wat denk je dat dit kost?" · reacties bij de ingang · hauls (drukste dag!) | 2–3 reels |
+
+### Week 2: tweede batch
+| Dag | Opnemen | Klaar voor |
+|---|---|---|
+| 7 (ma) | **A2: Groenrijk vs.** · **A3: Ranzijn vs.** (zelfde opzet, back-to-back) | 2 reels |
+| 8 (di) | **B3: Naturel/Scandi** · **B4: Frosted Galaxy** | 2 reels |
+| 9 (wo) | **D:** "Een dag als kerstmedewerker" · staff picks "favoriet onder €5" (5 medewerkers) | 2 reels + carrousel |
+| 10 (do) | **C3: collega vs. collega, €20** · **C4: vensterbank in 60 sec** | 2 reels |
+| 11 (vr) | **A4: Xenos vs.** · inhaal- en herkansingsshots | 1 reel |
+| 12 (za) | **E:** tweede ronde straatinterviews · "Boskoop zegt…" one-liners · Google-reviews | 2–3 reels |
+
+### Week 3 (halve week): urgentie & afronding
+| Dag | Opnemen | Klaar voor |
+|---|---|---|
+| 13 (ma) | **B5: Kinderkamerboom / Retro** · last-minute cadeaus onder €10 | 2 reels |
+| 14 (di) | **Urgentie-content:** "Op = op", "Nog maar __ dagen", aftelvideo's (losse intro's opnemen, datum later in de montage) | 3–4 korte reels |
+| 15 (wo) | **Laatste b-roll + inhaaldag:** alles wat mislukt is opnieuw · drone/buitenshot · nieuwe items van de laatste levering | Buffer |
+
+**Opbrengst na 2,5 week (indicatie):** ±28–32 video's
+- 4x vergelijking (A)
+- 5x themaboom (B)
+- 4x upgrade-challenge (C)
+- ±6x behind the scenes (D)
+- ±6x social proof (E)
+- ±4x urgentie
+- plus een volle b-roll-bank voor de stories
+
+**Tips voor de opnameperiode**
+- **Monteer tijdens het opnemen.** Monteer elke avond de video's van die dag (of de volgende ochtend). Dan zie je meteen welke shots ontbreken en kun je die nog inhalen op dag 11 of 15.
+- **Houd een vaste opstelling** voor serie A en B (zelfde hoek, licht en achtergrond). Dat maakt de serie herkenbaar en scheelt opbouwtijd.
+- **Film zaterdag de klanten.** Dan is het het drukst en krijg je de meeste echte reacties.
+- **Prijzen veranderen.** Controleer vlak voor het posten of de prijzen in de vergelijkingen nog kloppen.
+- **Assortiment wisselt.** Film nieuwe items meteen bij binnenkomst. Dat is ook je bewijs voor de USP "assortiment verandert".
+
+## 7. Draaidag-checklist
 - [ ] Telefoon met 4K/60fps (voor slow motion), opgeschoonde lens
 - [ ] Gimbal + klein statief
 - [ ] Clip-on microfoon (voor interviews)
