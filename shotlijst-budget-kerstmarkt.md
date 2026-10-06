@@ -134,10 +134,25 @@ Korte, rauwe video's met een telefoon in de hand. Juist niet te gelikt.
 |---|---|---|
 | Opbouw (6–8 wk vóór opening) | BHTS + teaser | Opbouw-timelapse, "nieuwe levering", countdown |
 | Opening | Beleving + social proof | Reacties bij de ingang, gratis bakkie, eerste haul |
-| Wk 2–5 | Goedkoop + inspiratie | 1x per week *Intratuin vs. …* (rotatie: Intratuin → Groenrijk → Ranzijn → Xenos), 1x *Kerstboom in thema*, 1x *X sec upgraden* |
-| Laatste 2 wk | Urgentie | "Nog maar __ dagen", "Op = op", last-minute cadeaus onder €10 |
+| Wk 2–5 | Goedkoop + inspiratie | Volg het weekritme hieronder (rotatie *Intratuin vs. …*: Intratuin → Groenrijk → Ranzijn → Xenos) |
+| Laatste 2 wk | Urgentie | Zelfde ritme, maar met de focus op "Nog maar __ dagen", "Op = op" en last-minute cadeaus onder €10 |
 
-**Ritme:** 3–4 reels per week + dagelijks een story (nieuw binnen of staff pick).
+**Ritme: 6 posts per week** (zondag vrij) + dagelijks een story (nieuw binnen of staff pick).
+
+| Dag | Serie | Pijler | Voorbeeld |
+|---|---|---|---|
+| Ma | **D. Behind the scenes** | BHTS | "Nieuwe levering binnen!" (start van de week, laat zien dat het assortiment wisselt) |
+| Di | **B. Kerstboom in [thema] voor €[X]** | Kerstinspiratie | Strikken & linten voor €50 |
+| Wo | **A. [Concurrent] vs. Budget Kerstmarkt** | Goedkoop | Week 1 Intratuin, wk 2 Groenrijk, wk 3 Ranzijn, wk 4 Xenos |
+| Do | **E. Social proof** | Social proof | "Wat denk je dat dit kost?" straatinterview |
+| Vr | **C. In X sec upgraden** | Inspiratie + goedkoop | 30 sec · €20 · tafel kerstklaar (weekend-shoppers triggeren) |
+| Za | **Mix: haul / staff pick / reacties** | Social proof + BHTS | "Mijn favoriet onder de €5" of compilatie van de reacties bij de ingang |
+
+**Productietip bij 6x per week:** filmen in batches. Plan 1 vaste draaidag per week (bijv. maandag of dinsdag) voor series A, B en C, die veel opbouw vragen. Series D en E film je doorlopend tijdens openingstijden met de telefoon. Zo heb je altijd 1 week content vooruit.
+
+**Per week schieten:** 1 vergelijking (A) · 1 themaboom (B) · 1 upgrade-challenge (C) · 2–3 korte BHTS-clips (D) · 3–5 klantmomenten (E) · een blok b-roll.
+
+**Posttijden:** check in Metricool de beste tijden voor jullie account. Als vuistregel scoren 's avonds (19:00–21:00) en zaterdagochtend goed bij lokaal publiek.
 
 ## 6. Draaidag-checklist
 - [ ] Telefoon met 4K/60fps (voor slow motion), opgeschoonde lens
