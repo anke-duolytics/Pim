@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kerstfilmpje</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@1,500&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #07080d; --fg: #f4ead6; --muted: #b9ab90; --line: rgba(255, 220, 160, 0.25); --btn: rgba(255, 220, 160, 0.08); --btn-hover: rgba(255, 220, 160, 0.16); }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #07080d; } }
+  :root[data-theme="dark"] { --bg: #07080d; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; }
+  body {
+    background: radial-gradient(ellipse at 50% 40%, #1a1410 0%, var(--bg) 70%);
+    background-color: var(--bg); color: var(--fg);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 12px; padding: 12px 16px; overflow: hidden;
+  }
+  canvas {
+    display: block; max-width: 100%; max-height: calc(100vh - 76px); height: auto;
+    aspect-ratio: 1080 / 1920; border-radius: 10px;
+    box-shadow: 0 0 0 1px var(--line), 0 20px 60px rgba(0, 0, 0, 0.7), 0 0 120px rgba(255, 180, 80, 0.08);
+  }
+  .controls { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+  button {
+    font: inherit; font-size: 17px; font-style: italic; color: var(--fg);
+    background: var(--btn); border: 1px solid var(--line); border-radius: 999px; padding: 6px 18px; cursor: pointer;
+  }
+  button:hover { background: var(--btn-hover); }
+  button:disabled { opacity: 0.5; cursor: default; }
+  #status { font-size: 15px; font-style: italic; color: var(--muted); min-height: 1em; }
+</style>
+</head>
+<body>
+<canvas id="c" width="1080" height="1920" aria-label="Kerstfilmpje: kerstmannen en kerstvrouwtjes tuigen de kerstbomen op"></canvas>
+<div class="controls">
+  <button id="replay">↻ Opnieuw</button>
+  <button id="pause">❚❚ Pauze</button>
+  <button id="record">⬇ Download als video</button>
+</div>
+<div id="status"></div>
+
+<script>
+(() => {
+  const W = 1080, H = 1920;
+  const cv = document.getElementById('c');
+  const ctx = cv.getContext('2d');
+
+  // Scènes: plaatje, ondertitel en camerabeweging (start- en eindzoom + verschuiving)
+  const SCENES = [
+    { src: 'scene1.jpg', text: 'Op een koude winteravond…',            from: [1.18, 0, 0.06],   to: [1.04, 0, -0.02] },
+    { src: 'scene2.jpg', text: '…gingen de lichtjes één voor één aan',  from: [1.05, -0.04, 0], to: [1.2, 0.03, -0.05] },
+    { src: 'scene3.jpg', text: 'Glanzende kerstballen, rood en goud',   from: [1.2, 0.04, 0.03], to: [1.06, -0.02, 0] },
+    { src: 'scene4.jpg', text: 'En als kers op de taart: de gouden piek', from: [1.04, 0, 0.05], to: [1.22, 0, -0.08] },
+    { src: 'scene5.jpg', text: null,                                     from: [1.2, 0, -0.03],   to: [1.03, 0, 0.02] },
+  ];
+  const SCENE = 6.5, FADE = 1.4;
+  const LOOP = SCENES.length * SCENE + 1.5;
+  SCENES.forEach(s => { s.img = new Image(); s.img.src = s.src; });
+
+  const clamp01 = t => Math.max(0, Math.min(1, t));
+  const ease = t => t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+  const lerp = (a, b, t) => a + (b - a) * t;
+
+  let seed = 11;
+  const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+
+  function glowSprite(rgb) {
+    const s = document.createElement('canvas'); s.width = s.height = 128;
+    const g = s.getContext('2d');
+    const rg = g.createRadialGradient(64, 64, 0, 64, 64, 64);
+    rg.addColorStop(0, 'rgba(255,255,255,1)'); rg.addColorStop(0.08, `rgba(${rgb},1)`);
+    rg.addColorStop(0.35, `rgba(${rgb},0.3)`); rg.addColorStop(1, `rgba(${rgb},0)`);
+    g.fillStyle = rg; g.fillRect(0, 0, 128, 128);
+    return s;
+  }
+  const GOLD = glowSprite('255,190,90');
+
+  const flakes = Array.from({ length: 200 }, () => ({ x: rnd() * W, y: rnd() * H, r: 1 + rnd() * 3, v: 30 + rnd() * 60, w: rnd() * 6.28, z: rnd() }));
+  const sparks = Array.from({ length: 60 }, () => ({ x: rnd() * W, y: rnd() * H, ph: rnd() * 6.28, sp: 0.6 + rnd() * 1.6, s: 10 + rnd() * 26, vy: 6 + rnd() * 16 }));
+
+  function drawScene(s, p, alpha) {
+    if (!s.img.complete || !s.img.naturalWidth) return;
+    const e = ease(p);
+    const z = lerp(s.from[0], s.to[0], e), dx = lerp(s.from[1], s.to[1], e), dy = lerp(s.from[2], s.to[2], e);
+    const iw = s.img.naturalWidth, ih = s.img.naturalHeight;
+    const cover = Math.max(W / iw, H / ih) * z;
+    const w = iw * cover, h = ih * cover;
+    ctx.globalAlpha = alpha;
+    ctx.drawImage(s.img, (W - w) / 2 + dx * W, (H - h) / 2 + dy * H, w, h);
+  }
+
+  let t0 = performance.now(), paused = false, pausedAt = 0, last = 0;
+  function frame(now) {
+    const t = paused ? pausedAt : ((now - t0) / 1000) % LOOP;
+    let dt = t - last; if (dt < 0 || dt > 0.1) dt = 0.016; last = t;
+    render(t, paused ? 0 : dt);
+    requestAnimationFrame(frame);
+  }
+
+  function render(t, dt) {
+    ctx.globalCompositeOperation = 'source-over'; ctx.globalAlpha = 1; ctx.shadowBlur = 0;
+    ctx.fillStyle = '#07080d'; ctx.fillRect(0, 0, W, H);
+
+    // Beelden met zachte overgangen
+    const i = Math.min(SCENES.length - 1, Math.floor(t / SCENE));
+    const local = t - i * SCENE;
+    const span = SCENE + FADE;
+    drawScene(SCENES[i], (local + FADE) / span, 1);
+    if (local > SCENE - FADE && i + 1 < SCENES.length) {
+      drawScene(SCENES[i + 1], (local - (SCENE - FADE)) / span, ease((local - (SCENE - FADE)) / FADE));
+    }
+    ctx.globalAlpha = 1;
+
+    // In- en uitfaden vanuit zwart
+    const black = 1 - clamp01(t / 1.2) * clamp01((LOOP - t) / 1.4);
+    if (black > 0) { ctx.fillStyle = `rgba(7,8,13,${black})`; ctx.fillRect(0, 0, W, H); }
+
+    // Zacht vignet
+    const vg = ctx.createRadialGradient(W / 2, H / 2, H * 0.3, W / 2, H / 2, H * 0.72);
+    vg.addColorStop(0, 'rgba(0,0,0,0)'); vg.addColorStop(1, 'rgba(5,3,8,0.55)');
+    ctx.fillStyle = vg; ctx.fillRect(0, 0, W, H);
+
+    // Twinkelende gouden glinsters
+    ctx.globalCompositeOperation = 'lighter';
+    for (const s of sparks) {
+      s.y -= s.vy * dt; if (s.y < -20) { s.y = H + 20; s.x = rnd() * W; }
+      const a = Math.pow(Math.max(0, Math.sin(t * s.sp + s.ph)), 6);
+      ctx.globalAlpha = 0.8 * a * (1 - black);
+      ctx.drawImage(GOLD, s.x - s.s / 2, s.y - s.s / 2, s.s, s.s);
+    }
+
+    // Sneeuw
+    ctx.globalCompositeOperation = 'source-over';
+    ctx.fillStyle = '#fffaf0';
+    for (const f of flakes) {
+      f.y += f.v * (0.5 + f.z) * dt; f.w += dt * 0.8;
+      if (f.y > H + 5) { f.y = -5; f.x = rnd() * W; }
+      ctx.globalAlpha = (0.35 + 0.5 * f.z) * (1 - black);
+      ctx.beginPath(); ctx.arc(f.x + Math.sin(f.w) * 14, f.y, f.r * (0.6 + f.z), 0, Math.PI * 2); ctx.fill();
+    }
+
+    // Ondertitels
+    const s = SCENES[i];
+    ctx.save(); ctx.textAlign = 'center';
+    if (s.text) {
+      const a = clamp01((local - 0.8) / 0.8) * clamp01((SCENE - FADE - local) / 0.8);
+      ctx.globalAlpha = a;
+      ctx.font = 'italic 500 60px "Cormorant Garamond", Georgia, serif';
+      ctx.shadowColor = 'rgba(0,0,0,0.85)'; ctx.shadowBlur = 18;
+      ctx.fillStyle = '#fbf1dc';
+      ctx.fillText(s.text, W / 2, H - 170);
+    } else {
+      const a = clamp01((local - 0.6) / 1.2) * clamp01((LOOP - t) / 1.4);
+      ctx.globalAlpha = a;
+      ctx.shadowColor = 'rgba(255,170,60,0.9)'; ctx.shadowBlur = 30;
+      ctx.font = '150px "Great Vibes", "Brush Script MT", cursive';
+      ctx.fillStyle = '#ffe3a3';
+      ctx.fillText('Vrolijk Kerstfeest', W / 2, 250);
+      ctx.font = 'italic 500 52px "Cormorant Garamond", Georgia, serif';
+      ctx.fillStyle = '#fbf1dc';
+      ctx.fillText('en een sprankelend nieuwjaar', W / 2, 330);
+    }
+    ctx.restore();
+    ctx.globalAlpha = 1;
+  }
+
+  // ---------- Bediening ----------
+  const pauseBtn = document.getElementById('pause');
+  const restart = () => { t0 = performance.now(); last = 0; paused = false; pauseBtn.textContent = '❚❚ Pauze'; };
+  document.getElementById('replay').onclick = restart;
+  pauseBtn.onclick = () => {
+    if (paused) { t0 = performance.now() - pausedAt * 1000; paused = false; pauseBtn.textContent = '❚❚ Pauze'; }
+    else { pausedAt = ((performance.now() - t0) / 1000) % LOOP; paused = true; pauseBtn.textContent = '▶ Verder'; }
+  };
+
+  // Video opnemen werkt alleen als de pagina los geopend wordt (niet in een ingesloten viewer)
+  const recBtn = document.getElementById('record');
+  const statusEl = document.getElementById('status');
+  if (window.self !== window.top || !cv.captureStream || !window.MediaRecorder) recBtn.hidden = true;
+  recBtn.onclick = () => {
+    const types = ['video/mp4;codecs=avc1', 'video/mp4', 'video/webm;codecs=vp9', 'video/webm'];
+    const mime = types.find(m => MediaRecorder.isTypeSupported(m)) || '';
+    const rec = new MediaRecorder(cv.captureStream(30), mime ? { mimeType: mime, videoBitsPerSecond: 10e6 } : undefined);
+    const chunks = [];
+    rec.ondataavailable = e => e.data.size && chunks.push(e.data);
+    rec.onstop = () => {
+      const type = rec.mimeType || 'video/webm';
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(new Blob(chunks, { type }));
+      a.download = 'kerstfilmpje.' + (type.includes('mp4') ? 'mp4' : 'webm');
+      a.click();
+      recBtn.disabled = false; statusEl.textContent = 'Video klaar!';
+    };
+    restart();
+    recBtn.disabled = true;
+    statusEl.textContent = `Bezig met opnemen… (${Math.round(LOOP)} seconden)`;
+    rec.start();
+    setTimeout(() => rec.stop(), LOOP * 1000 - 100);
+  };
+
+  // ?t=12 zet het filmpje stil op een bepaald moment
+  const qt = parseFloat(new URLSearchParams(location.search).get('t'));
+  if (!isNaN(qt)) { paused = true; pausedAt = qt; }
+
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
