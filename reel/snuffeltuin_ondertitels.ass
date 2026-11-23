@@ -1,0 +1,63 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Cap,Inter Display,84,&H00FFFFFF,&H00FFFFFF,&H00000000,&H64000000,-1,0,0,0,100,100,0,0,1,6,3,2,80,80,520,1
+Style: Title,Inter Display,104,&H00FFFFFF,&H00FFFFFF,&H00000000,&H64000000,-1,0,0,0,100,100,0,0,1,7,4,8,60,60,260,1
+Style: Sub,Inter Display,64,&H0070E0FF,&H00FFFFFF,&H00000000,&H64000000,-1,0,0,0,100,100,0,0,1,5,3,8,60,60,400,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.28,0:00:01.08,Cap,,0,0,0,,{\fad(60,0)}Kom met ons
+Dialogue: 0,0:00:01.08,0:00:02.32,Cap,,0,0,0,,{\fad(60,0)}mee op avontuur
+Dialogue: 0,0:00:02.32,0:00:03.12,Cap,,0,0,0,,{\fad(60,0)}want onze baasjes
+Dialogue: 0,0:00:03.12,0:00:04.60,Cap,,0,0,0,,{\fad(60,0)}hadden toch echt
+Dialogue: 0,0:00:04.60,0:00:05.78,Cap,,0,0,0,,{\fad(60,0)}iets leuks bedacht
+Dialogue: 0,0:00:05.78,0:00:06.24,Cap,,0,0,0,,{\fad(60,0)}We gingen naar
+Dialogue: 0,0:00:06.24,0:00:07.78,Cap,,0,0,0,,{\fad(60,0)}de Snuffeltuin en
+Dialogue: 0,0:00:07.78,0:00:08.52,Cap,,0,0,0,,{\fad(60,0)}kijk dan
+Dialogue: 0,0:00:08.52,0:00:09.22,Cap,,0,0,0,,{\fad(60,0)}een heel bad
+Dialogue: 0,0:00:09.22,0:00:10.76,Cap,,0,0,0,,{\fad(60,0)}vol speeltjes
+Dialogue: 0,0:00:10.76,0:00:12.18,Cap,,0,0,0,,{\fad(60,0)}keukentjes
+Dialogue: 0,0:00:12.18,0:00:12.78,Cap,,0,0,0,,{\fad(60,0)}overal waar ik
+Dialogue: 0,0:00:12.78,0:00:13.78,Cap,,0,0,0,,{\fad(60,0)}lekker tussen kan
+Dialogue: 0,0:00:13.78,0:00:16.22,Cap,,0,0,0,,{\fad(60,0)}snuffelen en hmmm
+Dialogue: 0,0:00:16.22,0:00:16.96,Cap,,0,0,0,,{\fad(60,0)}ik ruik er
+Dialogue: 0,0:00:16.96,0:00:17.78,Cap,,0,0,0,,{\fad(60,0)}wat
+Dialogue: 0,0:00:17.78,0:00:18.74,Cap,,0,0,0,,{\fad(60,0)}een snoepje
+Dialogue: 0,0:00:18.74,0:00:19.72,Cap,,0,0,0,,{\fad(60,0)}want onze baasjes
+Dialogue: 0,0:00:19.72,0:00:21.06,Cap,,0,0,0,,{\fad(60,0)}hadden overal snoepjes
+Dialogue: 0,0:00:21.06,0:00:22.84,Cap,,0,0,0,,{\fad(60,0)}verstopt en wat
+Dialogue: 0,0:00:22.84,0:00:23.56,Cap,,0,0,0,,{\fad(60,0)}zit er hierin
+Dialogue: 0,0:00:23.56,0:00:24.91,Cap,,0,0,0,,{\fad(60,0)}en hierin
+Dialogue: 0,0:00:25.30,0:00:25.82,Cap,,0,0,0,,{\fad(60,0)}elke doos
+Dialogue: 0,0:00:25.82,0:00:26.89,Cap,,0,0,0,,{\fad(60,0)}elke mand
+Dialogue: 0,0:00:27.66,0:00:28.88,Cap,,0,0,0,,{\fad(60,0)}allemaal nieuwe geurtjes
+Dialogue: 0,0:00:28.88,0:00:30.08,Cap,,0,0,0,,{\fad(60,0)}voor mijn neus
+Dialogue: 0,0:00:30.08,0:00:31.28,Cap,,0,0,0,,{\fad(60,0)}van ballen tot
+Dialogue: 0,0:00:31.28,0:00:33.04,Cap,,0,0,0,,{\fad(60,0)}banden tot tunnels
+Dialogue: 0,0:00:33.04,0:00:33.50,Cap,,0,0,0,,{\fad(60,0)}ik weet niet
+Dialogue: 0,0:00:33.50,0:00:33.98,Cap,,0,0,0,,{\fad(60,0)}eens waar we
+Dialogue: 0,0:00:33.98,0:00:35.24,Cap,,0,0,0,,{\fad(60,0)}moeten beginnen en
+Dialogue: 0,0:00:35.24,0:00:35.74,Cap,,0,0,0,,{\fad(60,0)}kijk eens hoe
+Dialogue: 0,0:00:35.74,0:00:36.66,Cap,,0,0,0,,{\fad(60,0)}knap
+Dialogue: 0,0:00:36.66,0:00:37.56,Cap,,0,0,0,,{\fad(60,0)}ik sta gewoon
+Dialogue: 0,0:00:37.56,0:00:39.62,Cap,,0,0,0,,{\fad(60,0)}helemaal bovenop
+Dialogue: 0,0:00:39.62,0:00:40.56,Cap,,0,0,0,,{\fad(60,0)}Moe en blij
+Dialogue: 0,0:00:40.56,0:00:42.50,Cap,,0,0,0,,{\fad(60,0)}van alle lekkere
+Dialogue: 0,0:00:42.50,0:00:44.44,Cap,,0,0,0,,{\fad(60,0)}geurtjes en mijn
+Dialogue: 0,0:00:44.44,0:00:45.56,Cap,,0,0,0,,{\fad(60,0)}buikje vol van
+Dialogue: 0,0:00:45.56,0:00:47.26,Cap,,0,0,0,,{\fad(60,0)}alle lekkere snoepjes
+Dialogue: 0,0:00:47.26,0:00:48.42,Cap,,0,0,0,,{\fad(60,0)}neem ik mijn
+Dialogue: 0,0:00:48.42,0:00:49.68,Cap,,0,0,0,,{\fad(60,0)}baasjes maar weer
+Dialogue: 0,0:00:49.68,0:00:50.90,Cap,,0,0,0,,{\fad(60,0)}mee naar huis
+Dialogue: 0,0:00:50.90,0:00:51.26,Cap,,0,0,0,,{\fad(60,0)}kom je ook
+Dialogue: 0,0:00:51.26,0:00:51.68,Cap,,0,0,0,,{\fad(60,0)}een keer te
+Dialogue: 0,0:00:51.68,0:00:52.16,Cap,,0,0,0,,{\fad(60,0)}snuffelen in de
+Dialogue: 0,0:00:52.16,0:00:53.03,Cap,,0,0,0,,{\fad(60,0)}Snuffeltuin?
+Dialogue: 1,0:00:00.00,0:00:02.20,Title,,0,0,0,,{\fad(150,150)}Op avontuur!
+Dialogue: 1,0:00:52.80,0:00:55.10,Title,,0,0,0,,{\fad(200,0)}De Snuffeltuin
+Dialogue: 1,0:00:52.80,0:00:55.10,Sub,,0,0,0,,{\fad(200,0)}karinschalken.nl
